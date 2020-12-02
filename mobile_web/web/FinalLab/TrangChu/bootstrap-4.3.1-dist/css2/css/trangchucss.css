@@ -1,0 +1,46 @@
+.items{
+    float: left;
+}
+.items h1{
+    display: block;
+    line-height: 1.3em;
+    font-size: 14px;
+    color: #333;
+    margin: 0 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.items img{
+    display: inline-block;
+    margin: 15px auto;
+    transition: all ease 300ms;
+}
+.items .price{
+    display: block;
+    overflow: hidden;
+    padding: 5px 10px 10px 10px;
+}
+.items strong{
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    font-size: 14px;
+    color: #e10c00;
+    line-height: 15px;
+}
+.items span{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    text-decoration: line-through;
+    margin-left: 5px;
+    color: #222;}
+.fa-bolt {
+    color: yellow;
+}
+.fa-star{
+    color: yellow;
+}

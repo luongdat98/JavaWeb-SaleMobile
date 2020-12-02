@@ -1,0 +1,35 @@
+#form ul{
+    margin-top: 40px;
+}
+#form ul li{
+    list-style: none;
+    padding: 10px;
+}
+#user, #pass, #repass{
+    padding: 15px 10px;
+    width: 300px;
+    color: #3f2843;
+    font-weight: bolder;
+    font-family: Tahoma;
+    border: 10px solid #e6e6e6;
+    border-width: 0px;
+    border-radius: 20px;
+    -webkit-box-shadow: -3px 1px 23px 0px rgba(224,220,224,1);
+    -moz-box-shadow: -3px 1px 23px 0px rgba(224,220,224,1);
+    box-shadow: -3px 1px 23px 0px rgba(224,220,224,1);
+    cursor: pointer;
+}
+#submit{
+    background: orange;
+    color: #ffffff;
+    height: 44px;
+    width: 140px;
+    border: 10px;
+    border-radius: 44px;
+    margin-left: 92px;
+    -webkit-box-shadow: -3px 1px 23px 0px rgba(207,196,207,1);
+    -moz-box-shadow: -3px 1px 23px 0px rgba(207,196,207,1);
+    box-shadow: -3px 1px 23px 0px rgba(207,196,207,1);
+    cursor: pointer;
+    margin-top: 15px;
+}
