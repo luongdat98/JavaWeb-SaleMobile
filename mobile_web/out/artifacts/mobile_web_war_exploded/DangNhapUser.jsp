@@ -35,7 +35,7 @@
         <div class="form" id="form" style="margin: auto; width: 900px; height: 350px; border: 1px solid #ff00005c; border-radius: 5px; background: whitesmoke">
             <div class="row">
                 <div class="col-sm-6">
-                    <form action="<%=Util.fullLink("ServletDangNhapUser")%>" method="post">
+                    <form action="<%=Util.fullLink("ServletDoLogin")%>" method="post">
                         <span style="font-size: 20px; font-weight: bold; float: left; padding: 20px; margin-left: 30%">ĐĂNG NHẬP</span><br>
                         <ul>
                             <li><i class="fas fa-user" style="padding-right: 5px"></i> <input type="text" id="user" name="user" placeholder="Nhập tên tài khoản" ></li>
@@ -48,17 +48,17 @@
                                     <a href="<%=Util.fullLink("QuenMatKhau.jsp")%>"> Quên mật khẩu?</a>
                                 </div>
                             </div>
-                            <%
-                                if(session.getAttribute("errDNU")!= null)
-                                {
-                                    Err err = (Err) session.getAttribute("errDNU");
-                                    for(String errCon:err.getLoi())
-                                    {
-                            %>
-                            <p style="width: 256px;color: red;margin-left: 50px;">  <%=errCon%></p>
-                            <%
-                                    }
-                                }%>
+<%--                            <%--%>
+<%--                                if(session.getAttribute("errDNU")!= null)--%>
+<%--                                {--%>
+<%--                                    Err err = (Err) session.getAttribute("errDNU");--%>
+<%--                                    for(String errCon:err.getLoi())--%>
+<%--                                    {--%>
+<%--                            %>--%>
+<%--                            <p style="width: 256px;color: red;margin-left: 50px;">  <%=errCon%></p>--%>
+<%--                            <%--%>
+<%--                                    }--%>
+<%--                                }%>--%>
 
                             <button type="submit" class="submittext" id="submit">Đăng Nhập</button>
                         </ul>

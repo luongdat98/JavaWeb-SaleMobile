@@ -43,7 +43,7 @@ public class ConnectionDB {
     // Hàm main dùng để test kết nối db đc chưa. Nếu connect đc r thì comment lại.
 //    public static void main(String[] args) throws Exception {
 //        Statement s = ConnectionDB.connect();
-//        ResultSet rs = s.executeQuery("select * from user");
+//        ResultSet rs = s.executeQuery("select * from user2");
 //        rs.last();
 //        System.out.println(rs.getRow());
 //        rs.beforeFirst();

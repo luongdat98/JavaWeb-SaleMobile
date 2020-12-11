@@ -1,4 +1,4 @@
-<%--<%@ page import="vn.edu.nlu.fit.basang.CuoiKy.Control.FullLink" %>--%>
+<%@ page import="vn.edu.nlu.fit.model.User" %><%--<%@ page import="vn.edu.nlu.fit.basang.CuoiKy.Control.FullLink" %>--%>
 <%--<%@ page import="vn.edu.nlu.fit.basang.CuoiKy.Model.UserDemo" %>--%>
 <%--<%@ page import="java.sql.ResultSet" %>--%>
 <%--<%@ page import="vn.edu.nlu.fit.basang.CuoiKy.Model.Cart" %>--%>
@@ -56,19 +56,19 @@
                 <div class="col-sm-4" style="padding-top: 50px">
                     <div class="row">
                         <div class="col-sm-9">
-<%--                            <%--%>
-<%--                                if(session.getAttribute("Su")!= null)--%>
-<%--                                {--%>
-<%--                                    UserDemo u = (UserDemo) session.getAttribute("Su");--%>
-<%--                                    String name = u.getName();--%>
-<%--                            %>--%>
+                            <%
+                                if(session.getAttribute("User")!= null)
+                                {
+                                    User u = (User) session.getAttribute("User");
+                                    String name = u.getUsername();
+                            %>
                             <div class="row">
                                 <div class="col-sm-12" style="padding: 0px">
                                     <div class="dropdown" >
                                         <ul class="nav navbar-nav collapse navbar-collapse" style="float: none; margin: 5px 0px 0px 50px;">
                                             <li class="dropdown" >
 <%--                                                <a href="#" style="color: whitesmoke; padding-top: 5px; font-size: 20px; background: none">Xin chào: <%=name%></a>--%>
-                                                <a href="#" style="color: whitesmoke; padding-top: 5px; font-size: 20px; background: none">Xin chào:</a>
+                                                <a href="#" style="color: whitesmoke; padding-top: 5px; font-size: 20px; background: none">Xin chào: <%=name%></a>
                                                 <ul role="menu" class="sub-menu">
                                                     <li><a href="http://localhost:8080/Demo/CapNhatThongTin.jsp">Thông Tin Tài Khoản</a></li>
                                                     <li>
@@ -82,11 +82,11 @@
                                 </div>
                             </div>
 
-<%--                            <%--%>
-<%--                            }--%>
-<%--                            else--%>
-<%--                            {--%>
-<%--                            %>--%>
+                            <%
+                            }
+                            else
+                            {
+                            %>
                             <div style="border: 1px solid silver; border-radius: 5px; width: 210px; margin-left: 30px;">
                                 <div class="row">
                                     <div class="col-sm-6" style="padding: 0px">
@@ -103,7 +103,7 @@
                                     </div>
                                 </div>
                             </div>
-<%--                            <% }%>--%>
+                            <% }%>
 
                         </div>
 
