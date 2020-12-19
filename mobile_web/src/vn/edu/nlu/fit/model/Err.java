@@ -3,23 +3,23 @@ package vn.edu.nlu.fit.model;
 import java.util.ArrayList;
 
 public class Err {
-    private ArrayList<String> loi;
+    private ArrayList<String> error;
 
     public Err(ArrayList<String> loi) {
-        this.loi = loi;
+        this.error = error;
     }
 
     public Err(){
-        loi = new ArrayList<>();
+        error = new ArrayList<>();
     }
 
     public ArrayList<String> getLoi() {
-        return loi;
+        return error;
     }
 
     public ArrayList<String> add(String s)
     {
-        this.loi.add(s);
-        return loi;
+        this.error.add(s);
+        return error;
     }
 }

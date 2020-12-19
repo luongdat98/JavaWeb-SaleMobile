@@ -1,4 +1,5 @@
-<%@ page import="vn.edu.nlu.fit.model.User" %><%--<%@ page import="vn.edu.nlu.fit.basang.CuoiKy.Control.FullLink" %>--%>
+<%@ page import="vn.edu.nlu.fit.model.User" %>
+<%@ page import="vn.edu.nlu.fit.filter.Util" %><%--<%@ page import="vn.edu.nlu.fit.basang.CuoiKy.Control.FullLink" %>--%>
 <%--<%@ page import="vn.edu.nlu.fit.basang.CuoiKy.Model.UserDemo" %>--%>
 <%--<%@ page import="java.sql.ResultSet" %>--%>
 <%--<%@ page import="vn.edu.nlu.fit.basang.CuoiKy.Model.Cart" %>--%>
@@ -72,8 +73,7 @@
                                                 <ul role="menu" class="sub-menu">
                                                     <li><a href="http://localhost:8080/Demo/CapNhatThongTin.jsp">Thông Tin Tài Khoản</a></li>
                                                     <li>
-<%--                                                        <a href="<%=FullLink.fullLink("ServletDangXuat")%>">Đăng xuất</a>--%>
-                                                        <a href="">Đăng xuất</a>
+                                                        <a href="<%=Util.fullLink("ServletDangXuat")%>">Đăng xuất</a>
                                                     </li>
                                                 </ul>
                                             </li>

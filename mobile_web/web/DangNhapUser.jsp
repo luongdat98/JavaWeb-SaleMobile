@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="FinalLab/FormDangKy/fa.5/fontawesome-free-5.11.1-web/css/v4-shims.css">
     <link rel="stylesheet" href="FinalLab/FormDangKy/bootstrap-4.3.1-dist/css2/css/dangky.css">
     <script src="FinalLab/TrangChu/tet.js"></script>
-
+    <script type="text/javascript" src="FinalLab/TrangChu/jquery-3.5.1.min.js"></script>
 </head>
 <body>
 <jsp:include page="HeaderTest.jsp"></jsp:include>
@@ -48,19 +48,20 @@
                                     <a href="<%=Util.fullLink("QuenMatKhau.jsp")%>"> Quên mật khẩu?</a>
                                 </div>
                             </div>
-<%--                            <%--%>
-<%--                                if(session.getAttribute("errDNU")!= null)--%>
-<%--                                {--%>
-<%--                                    Err err = (Err) session.getAttribute("errDNU");--%>
-<%--                                    for(String errCon:err.getLoi())--%>
-<%--                                    {--%>
-<%--                            %>--%>
-<%--                            <p style="width: 256px;color: red;margin-left: 50px;">  <%=errCon%></p>--%>
-<%--                            <%--%>
-<%--                                    }--%>
-<%--                                }%>--%>
+                            <%
+                                if(session.getAttribute("Error")!= null)
+                                {
+                                    Err err = (Err) session.getAttribute("Error");
+                                    for(String errCon:err.getLoi())
+                                    {
+                            %>
+                            <p style="width: 256px;color: red;margin-left: 50px;">  <%=errCon%></p>
+                            <%
+                                    }
+                                }%>
 
                             <button type="submit" class="submittext" id="submit">Đăng Nhập</button>
+<%--                            <input type="button" id="submit" value="Đăng nhập" style="color: black;">--%>
                         </ul>
                     </form>
 
@@ -80,10 +81,7 @@
     </div>
 </div>
 
-
-
 <%@include file="FooterTC2.jsp"%>
-
 
 </body>
 </html>

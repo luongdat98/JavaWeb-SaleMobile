@@ -1,0 +1,12 @@
+input.form-control.mr-sm-2.mysearch{
+    margin-right: 20px;
+}
+span.createdate{
+    color: red;
+}
+span.updatedate{
+    color: red;
+}
+div.col-xs-12.myformsearch{
+    margin-bottom: 20px;
+}

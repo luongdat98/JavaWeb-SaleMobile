@@ -1,0 +1,10 @@
+span.titleinvoice{
+    margin-right: 20px;
+}
+div.total{
+    margin-left: 850px;
+}
+span.totalmoney{
+    color: red;
+    font-size: 15px;
+}
