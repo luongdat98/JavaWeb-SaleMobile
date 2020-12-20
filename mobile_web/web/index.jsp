@@ -1,3 +1,5 @@
+<%@ page import="vn.edu.nlu.fit.model.User" %>
+<%@ page import="vn.edu.nlu.fit.filter.Util" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,14 +70,17 @@
 
         <div class="navbar-buttons navbar-header pull-right" role="navigation">
             <ul class="nav ace-nav">
-
+                <% if(session.getAttribute("Admin") != null){
+                    User u = (User) session.getAttribute("Admin");
+                    String name = u.getName();
+                %>
 
                 <li class="light-blue dropdown-modal">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                         <img class="nav-user-photo" src="admin/assets/images/avatars/user.jpg" alt="Jason's Photo"/>
                         <span class="user-info">
 									<small>Welcome,</small>
-									Jason
+									<%=name%>
 								</span>
 
                         <i class="ace-icon fa fa-caret-down"></i>
@@ -99,13 +104,16 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="#">
+                            <a href="<%=Util.fullLink("ServletLogoutAdmin")%>">
                                 <i class="ace-icon fa fa-power-off"></i>
                                 Logout
                             </a>
                         </li>
                     </ul>
                 </li>
+                <%
+                    }else {}
+                %>
             </ul>
         </div>
     </div><!-- /.navbar-container -->
@@ -177,7 +185,7 @@
                 <b class="arrow"></b>
                 <ul class="submenu">
                     <li class="">
-                        <a href="manage_user.html">
+                        <a href="<%=Util.fullLink("ServletManageUser")%>">
                             <i class="menu-icon fa fa-caret-right"></i>
                             Quản lí User
                         </a>
@@ -215,7 +223,7 @@
                 <b class="arrow"></b>
                 <ul class="submenu">
                     <li class="">
-                        <a href="manage_user.html">
+                        <a href="manage_user.jsp">
                             <i class="menu-icon fa fa-caret-right"></i>
                             Loại danh mục
                         </a>

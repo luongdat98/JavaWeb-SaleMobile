@@ -25,7 +25,7 @@ public class ServletDoLogin extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Cách 1 : Không sử dụng AJAX.
-                try{
+
             request.setCharacterEncoding("UTF-8");
             response.setCharacterEncoding("UTF-8");
             HttpSession session = request.getSession();
@@ -35,6 +35,7 @@ public class ServletDoLogin extends HttpServlet {
             // Tạo câu lệnh query và đưa vào preparedStatement
             // PreparedStatement thực hiện nhiều câu lệnh query.
             String query = "SELECT * FROM user2 WHERE username = ? AND password = ? AND active = 1";
+        try{
             PreparedStatement ps = ConnectionDB.getPrepareStatement(query);
             // Set các giá trị người dùng nhập vào đưa vào câu lệnh thực thi.
             ps.setString(1, username);
@@ -53,13 +54,13 @@ public class ServletDoLogin extends HttpServlet {
                             result.getString("address"), result.getString("email"), result.getDate("birthday"),
                             result.getInt("phone"), result.getInt("level"), result.getInt("active"));
                     if(user.getLevel() > 1){ // Nếu user > 1 tất là level 2 trở lên là admin thì vào trang của admin.
-                        session.setAttribute("User", user);
-                        request.getRequestDispatcher("TrangChu.jsp").forward(request, response);
+                        session.setAttribute("Admin", user);
+                        request.getRequestDispatcher("index.jsp").forward(request, response);
                     }
                     else {
                         if (user.getLevel() == 1){ // Nếu bằng 1 thì user là người dùng.
                             session.setAttribute("User", user);
-                            request.getRequestDispatcher("test.html").forward(request, response);
+                            request.getRequestDispatcher("TrangChu.jsp").forward(request, response);
                         }
                     }
                 }
@@ -70,12 +71,11 @@ public class ServletDoLogin extends HttpServlet {
                 session.setAttribute("Error", error);
                 response.sendRedirect("DangNhapUser.jsp");
             }
-
-
-
         }catch (ClassNotFoundException | SQLException e){
             e.printStackTrace();
         }
+
+
 
         // Cách 2: Sử dụng AJAX
 
